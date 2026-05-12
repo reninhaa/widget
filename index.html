@@ -15,7 +15,7 @@
   --r:12px;
 }
 body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--text); min-height:100vh; }
- 
+
 /* HERO */
 .hero { background:var(--forest); padding:2.2rem 2rem 1.8rem; text-align:center; position:relative; overflow:hidden; }
 .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(46,125,69,.25) 0%,transparent 70%); pointer-events:none; }
@@ -23,7 +23,7 @@ body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--te
 .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(24px,5vw,38px); font-weight:400; color:#fff; line-height:1.2; margin-bottom:6px; position:relative; }
 .hero h1 em { font-style:italic; color:#A8D4B5; }
 .hero-sub { font-size:13px; color:rgba(255,255,255,.5); max-width:480px; margin:0 auto; position:relative; line-height:1.5; }
- 
+
 /* TABS */
 .tabs-wrap { background:var(--white); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:200; box-shadow:0 2px 12px rgba(0,0,0,.05); }
 .tabs { display:flex; max-width:720px; margin:0 auto; overflow-x:auto; scrollbar-width:none; }
@@ -31,13 +31,13 @@ body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--te
 .tab-btn { flex:1; min-width:110px; padding:13px 10px; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--muted); background:none; border:none; border-bottom:2px solid transparent; cursor:pointer; transition:all .2s; white-space:nowrap; text-align:center; }
 .tab-btn .tab-icon { font-size:14px; display:block; margin-bottom:2px; }
 .tab-btn.active { color:var(--forest); border-bottom-color:var(--gold); }
- 
+
 /* PANELS */
 .panels { max-width:720px; margin:0 auto; padding:2rem 1.5rem 3rem; }
 .panel { display:none; animation:fadeUp .25s ease; }
 .panel.active { display:block; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
- 
+
 /* STEPS */
 .step { display:none; }
 .step.active { display:block; animation:fadeUp .2s ease; }
@@ -48,7 +48,7 @@ body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--te
 .step-label { font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--sage); margin-bottom:5px; }
 .step-title { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:var(--forest); margin-bottom:5px; }
 .step-sub { font-size:13px; color:var(--muted); margin-bottom:20px; line-height:1.5; }
- 
+
 /* OPTION CARDS */
 .options-grid { display:grid; gap:9px; }
 .options-grid.col2 { grid-template-columns:1fr 1fr; }
@@ -60,13 +60,13 @@ body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--te
 .option-desc { font-size:12px; color:var(--muted); line-height:1.4; }
 .option-check { width:17px; height:17px; border-radius:50%; border:1.5px solid var(--border); flex-shrink:0; margin-left:auto; margin-top:2px; display:flex; align-items:center; justify-content:center; font-size:9px; }
 .option-card.selected .option-check { background:var(--forest); border-color:var(--forest); color:white; content:'✓'; }
- 
+
 /* ═══ PLANTA SVG ═══ */
 .floorplan-wrap { background:var(--white); border:1px solid var(--border); border-radius:var(--r); padding:16px; margin-bottom:12px; }
 .floorplan-title { font-size:12px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.07em; margin-bottom:12px; }
 .floorplan-svg-wrap { width:100%; overflow:hidden; border-radius:8px; background:#F0EDE6; }
 .floorplan-svg-wrap svg { width:100%; height:auto; display:block; }
- 
+
 /* Salas clicáveis */
 .room { cursor:pointer; transition:all .2s; }
 .room rect, .room polygon { transition:fill .2s, stroke .2s; }
@@ -76,14 +76,14 @@ body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--te
 .room text { font-family:'DM Sans',sans-serif; font-size:11px; fill:#1A1A14; pointer-events:none; font-weight:600; }
 .room .room-cap { font-size:9px; font-weight:400; fill:#6B6B5A; }
 .room.selected .room-cap { fill:rgba(255,255,255,.8); }
- 
+
 /* Capacidade table */
 .cap-table { width:100%; border-collapse:collapse; font-size:12px; margin-top:10px; }
 .cap-table th { text-align:left; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); padding:5px 8px; border-bottom:1px solid var(--border); }
 .cap-table td { padding:8px 8px; border-bottom:1px solid #F0EDE6; color:var(--text); }
 .cap-table tr:last-child td { border-bottom:none; }
 .cap-table .highlight { background:var(--mist); font-weight:600; color:var(--forest); border-radius:4px; }
- 
+
 /* SLIDER */
 .slider-display { text-align:center; margin-bottom:14px; }
 .slider-num { font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:600; color:var(--forest); line-height:1; }
@@ -92,7 +92,7 @@ input[type=range] { width:100%; -webkit-appearance:none; height:4px; border-radi
 input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; height:22px; border-radius:50%; background:var(--forest); border:3px solid white; box-shadow:0 2px 8px rgba(13,46,24,.3); cursor:pointer; }
 .slider-labels { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:8px; }
 .hint-box { margin-top:12px; padding:10px 14px; background:var(--mist); border-radius:8px; font-size:12px; color:var(--forest-m); line-height:1.5; border-left:3px solid var(--moss); }
- 
+
 /* PERIOD GRID */
 .period-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
 .period-card { padding:13px; border:1.5px solid var(--border); border-radius:var(--r); cursor:pointer; transition:all .18s; text-align:center; background:var(--white); }
@@ -101,7 +101,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; h
 .period-emoji { font-size:19px; margin-bottom:5px; }
 .period-name { font-size:13px; font-weight:600; color:var(--text); }
 .period-time { font-size:11px; color:var(--muted); margin-top:2px; }
- 
+
 /* EXTRAS */
 .extras-grid { display:grid; gap:8px; }
 .extra-card { display:flex; align-items:center; gap:13px; padding:12px 15px; border:1.5px solid var(--border); border-radius:var(--r); cursor:pointer; transition:all .18s; background:var(--white); }
@@ -116,7 +116,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; h
 .extra-card.selected .extra-toggle { background:var(--forest); }
 .extra-toggle::after { content:''; position:absolute; width:14px; height:14px; border-radius:50%; background:white; top:3px; left:3px; transition:transform .2s; box-shadow:0 1px 3px rgba(0,0,0,.2); }
 .extra-card.selected .extra-toggle::after { transform:translateX(16px); }
- 
+
 /* ESTIMATE */
 .estimate-card { background:var(--forest); border-radius:var(--r); padding:22px; margin-bottom:14px; color:white; position:relative; overflow:hidden; }
 .estimate-card::before { content:'🌿'; position:absolute; right:-10px; bottom:-20px; font-size:90px; opacity:.07; }
@@ -126,13 +126,13 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; h
 .est-row { display:flex; justify-content:space-between; font-size:12px; color:rgba(255,255,255,.7); padding:4px 0; border-bottom:1px solid rgba(255,255,255,.08); }
 .est-row:last-child { border-bottom:none; font-weight:600; color:white; font-size:13px; margin-top:4px; }
 .estimate-note { font-size:11px; color:rgba(255,255,255,.45); margin-top:10px; }
- 
+
 .summary-list { list-style:none; margin-bottom:18px; }
 .summary-list li { display:flex; justify-content:space-between; align-items:center; padding:9px 0; border-bottom:1px solid var(--border); font-size:13px; }
 .summary-list li:last-child { border-bottom:none; }
 .summary-list li span:first-child { color:var(--muted); }
 .summary-list li strong { color:var(--forest); }
- 
+
 /* CALENDAR */
 .cal-nav { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
 .cal-nav-btn { width:32px; height:32px; border-radius:50%; border:1px solid var(--border); background:white; cursor:pointer; font-size:14px; color:var(--text); display:flex; align-items:center; justify-content:center; transition:all .15s; }
@@ -149,11 +149,11 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; h
 .cal-legend { display:flex; gap:14px; margin-top:10px; flex-wrap:wrap; }
 .cal-legend-item { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); }
 .cal-dot { width:10px; height:10px; border-radius:3px; }
- 
+
 .date-note { margin-top:12px; padding:11px 14px; border-radius:8px; font-size:13px; line-height:1.5; }
 .date-note.ok { background:var(--mist); color:var(--forest-m); border-left:3px solid var(--moss); }
 .date-note.taken { background:var(--red-bg); color:#8B2B1B; border-left:3px solid var(--red); }
- 
+
 /* FORM */
 .form-group { margin-bottom:15px; }
 .form-label { display:block; font-size:11px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
@@ -162,7 +162,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; h
 .form-textarea { resize:vertical; min-height:80px; }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
 @media(max-width:500px) { .form-row{grid-template-columns:1fr} .options-grid.col2{grid-template-columns:1fr} .period-grid{grid-template-columns:1fr} }
- 
+
 /* BUTTONS */
 .btn-primary { width:100%; padding:13px 24px; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; background:var(--forest); color:white; border:none; border-radius:var(--r); cursor:pointer; transition:all .18s; }
 .btn-primary:hover { background:var(--forest-m); transform:translateY(-1px); box-shadow:0 4px 16px rgba(13,46,24,.25); }
@@ -172,14 +172,14 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; h
 .whatsapp-row { display:flex; align-items:center; justify-content:center; gap:8px; padding:11px; background:#E8F5E9; border-radius:8px; font-size:13px; color:#1B5E20; margin-top:10px; text-decoration:none; transition:background .15s; }
 .whatsapp-row:hover { background:#C8E6C9; }
 .small { font-size:11px; color:var(--muted); text-align:center; margin-top:8px; line-height:1.5; }
- 
+
 /* SUCCESS */
 .success-box { text-align:center; padding:28px 16px; }
 .success-icon { font-size:48px; margin-bottom:14px; }
 .success-title { font-family:'Cormorant Garamond',serif; font-size:26px; color:var(--forest); margin-bottom:8px; }
 .success-sub { font-size:14px; color:var(--muted); line-height:1.6; max-width:360px; margin:0 auto 14px; }
 .success-detail { padding:13px 15px; background:var(--mist); border-radius:var(--r); font-size:13px; color:var(--forest-m); text-align:left; line-height:1.7; }
- 
+
 /* LOADING */
 .loading-overlay { position:fixed; inset:0; background:rgba(13,46,24,.75); display:flex; align-items:center; justify-content:center; z-index:1000; opacity:0; pointer-events:none; transition:opacity .3s; }
 .loading-overlay.visible { opacity:1; pointer-events:all; }
@@ -187,26 +187,26 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:22px; h
 .loading-spinner { width:36px; height:36px; border:3px solid var(--border); border-top-color:var(--forest); border-radius:50%; animation:spin 0.8s linear infinite; margin:0 auto 14px; }
 @keyframes spin { to{transform:rotate(360deg)} }
 .loading-text { font-size:13px; color:var(--muted); }
- 
+
 hr { border:none; border-top:1px solid var(--border); margin:18px 0; }
 strong { font-weight:600; }
 </style>
 </head>
 <body>
- 
+
 <div class="loading-overlay" id="loading">
   <div class="loading-box">
     <div class="loading-spinner"></div>
     <div class="loading-text" id="loading-text">Carregando...</div>
   </div>
 </div>
- 
+
 <div class="hero">
   <div class="hero-eyebrow">Espaço do Bosque · Lapa, São Paulo</div>
   <h1>Seu evento em meio<br>à <em>natureza</em></h1>
   <p class="hero-sub">Calcule o valor, verifique datas e agende sua visita.</p>
 </div>
- 
+
 <div class="tabs-wrap">
   <div class="tabs">
     <button class="tab-btn active" onclick="showTab('calc',this)"><span class="tab-icon">🧮</span>Simular valor</button>
@@ -214,9 +214,9 @@ strong { font-weight:600; }
     <button class="tab-btn" onclick="showTab('visit',this)"><span class="tab-icon">🌿</span>Agendar visita</button>
   </div>
 </div>
- 
+
 <div class="panels">
- 
+
 <!-- ═══════════════════════════════════
      CALCULADORA
 ═══════════════════════════════════ -->
@@ -229,7 +229,7 @@ strong { font-weight:600; }
     <div class="step-dot" id="dot-4"></div>
     <div class="step-dot" id="dot-5"></div>
   </div>
- 
+
   <!-- STEP 0 — Tipo -->
   <div class="step active" id="step-0">
     <div class="step-label">Passo 1 de 6</div>
@@ -257,12 +257,12 @@ strong { font-weight:600; }
         <div class="option-check">✓</div>
       </div>
     </div>
-    <div id="social-notice" style="display:none;margin-top:12px;padding:12px 14px;background:#FDF4E1;border:1px solid #F5D78A;border-radius:8px;font-size:13px;color:#6B4B00;line-height:1.6;"><strong>⚠️ Evento Social — importante saber antes:</strong><br>• O <strong>som deve ficar na área interna</strong> do salão (restrição de ruído para a vizinhança)<br>• A operação é realizada por um <strong>parceiro terceirizado</strong>, que inclui buffet completo no pacote<br>• Valor de locação para eventos sociais é fixo por até 8 horas de evento</div>
+    <div id="social-notice" style="display:none;margin-top:12px;padding:12px 14px;background:#FDF4E1;border:1px solid #F5D78A;border-radius:8px;font-size:13px;color:#6B4B00;line-height:1.6;"><strong>⚠️ Evento Social — pacote único R$ 60.000</strong><br>• Inclui <strong>Salão inteiro + Área externa + Cobertura (lona)</strong> — espaço completo<br>• O <strong>som deve ficar na área interna</strong> do salão (restrição de ruído para a vizinhança)<br>• Operação realizada por <strong>parceiro terceirizado</strong> com buffet completo incluso<br>• Valor fixo por até 8 horas de evento</div>
     <div class="btn-row" style="justify-content:flex-end">
       <button class="btn-primary" style="width:auto;padding:12px 28px" onclick="next(1)">Próximo →</button>
     </div>
   </div>
- 
+
   <!-- STEP 1 — Pessoas -->
   <div class="step" id="step-1">
     <div class="step-label">Passo 2 de 6</div>
@@ -280,13 +280,13 @@ strong { font-weight:600; }
       <button class="btn-primary" style="width:auto;padding:12px 28px" onclick="next(2)">Próximo →</button>
     </div>
   </div>
- 
+
   <!-- STEP 2 — Espaço com PLANTA MULTI-SELECT -->
   <div class="step" id="step-2">
     <div class="step-label">Passo 3 de 6</div>
     <div class="step-title">Escolha o(s) espaço(s)</div>
     <div class="step-sub">Clique para selecionar um ou mais espaços. O Foyer é incluído automaticamente (acesso obrigatório aos banheiros).</div>
- 
+
     <!-- PLANTA SVG INTERATIVA -->
     <div class="floorplan-wrap">
       <div class="floorplan-title">🗺️ Planta do Espaço do Bosque — clique para selecionar</div>
@@ -294,10 +294,10 @@ strong { font-weight:600; }
         <svg viewBox="0 0 600 430" xmlns="http://www.w3.org/2000/svg">
           <rect width="600" height="430" fill="#E8F0EB"/>
           <text x="300" y="22" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#7BAE8A" font-weight="600" letter-spacing="2">🌳 BOSQUE — 1.000 ÁRVORES</text>
- 
+
           <!-- Bloco principal -->
           <rect x="80" y="35" width="440" height="250" fill="#EDE8DE" stroke="#C8C3B6" stroke-width="1.5" rx="4"/>
- 
+
           <!-- SALA 01 -->
           <g class="room" id="room-sala01" onclick="toggleRoom('sala01')">
             <rect x="88" y="42" width="170" height="120" rx="3" fill="#E8E2D6" stroke="#B8B3A6" stroke-width="1.5"/>
@@ -305,7 +305,7 @@ strong { font-weight:600; }
             <text x="173" y="110" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">Aud: 100p · Escolar: 45p</text>
             <text x="173" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">R$ 5.500</text>
           </g>
- 
+
           <!-- SALA 02 -->
           <g class="room" id="room-sala02" onclick="toggleRoom('sala02')">
             <rect x="268" y="42" width="244" height="120" rx="3" fill="#E8E2D6" stroke="#B8B3A6" stroke-width="1.5"/>
@@ -313,7 +313,7 @@ strong { font-weight:600; }
             <text x="390" y="110" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">Aud: 170p · Escolar: 70p</text>
             <text x="390" y="122" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">R$ 5.500</text>
           </g>
- 
+
           <!-- SALA 03 -->
           <g class="room" id="room-sala03" onclick="toggleRoom('sala03')">
             <rect x="88" y="170" width="118" height="107" rx="3" fill="#E8E2D6" stroke="#B8B3A6" stroke-width="1.5"/>
@@ -321,7 +321,7 @@ strong { font-weight:600; }
             <text x="147" y="231" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">Aud: 40p · Em U: 15p</text>
             <text x="147" y="243" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">R$ 5.500</text>
           </g>
- 
+
           <!-- FOYER — sempre incluso, visual bloqueado -->
           <g id="room-foyer" style="cursor:default">
             <rect x="214" y="170" width="138" height="107" rx="3" fill="#D4E8DA" stroke="#7BAE8A" stroke-width="2" stroke-dasharray="5,3"/>
@@ -329,7 +329,7 @@ strong { font-weight:600; }
             <text x="283" y="229" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2E7D45">✓ Sempre incluso</text>
             <text x="283" y="241" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#2E7D45">(acesso banheiros)</text>
           </g>
- 
+
           <!-- DECK -->
           <g class="room" id="room-deck" onclick="toggleRoom('deck')">
             <rect x="360" y="170" width="152" height="107" rx="3" fill="#E8E2D6" stroke="#B8B3A6" stroke-width="1.5"/>
@@ -337,31 +337,31 @@ strong { font-weight:600; }
             <text x="436" y="231" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">Coquetel: ~100p</text>
             <text x="436" y="243" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">R$ 3.300</text>
           </g>
- 
+
           <!-- SALÃO INTEIRO (overlay de seleção rápida) -->
           <g class="room" id="room-salao" onclick="selectSalaoInteiro()">
             <rect x="88" y="35" width="424" height="242" rx="4" fill="none" stroke="#2E7D45" stroke-width="2" stroke-dasharray="10,4"/>
             <text x="300" y="292" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#2E7D45" font-weight="700">── Selecionar Salão Inteiro (01+02+03+Foyer+Deck) ──</text>
           </g>
- 
+
           <!-- ÁREA EXTERNA -->
           <g class="room" id="room-externo" onclick="toggleRoom('externo')">
             <rect x="88" y="295" width="424" height="90" rx="3" fill="#D8E8D8" stroke="#7BAE8A" stroke-width="1.5"/>
             <text x="300" y="333" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" fill="#1A1A14" font-weight="600">Área Externa — Estrutura Box Truss</text>
-            <text x="300" y="348" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">Coquetel até 700p · R$ 13.200 (ext.) · R$ 11.000 (interno)</text>
+            <text x="300" y="348" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#6B6B5A">Coquetel até 700p · R$ 13.200 (até 18h) · R$ 15.840 (após 18h) · Social: R$ 5.000</text>
           </g>
- 
+
           <text x="300" y="418" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#9C9A8F">Clique para selecionar/deselecionar · Planta esquemática</text>
         </svg>
       </div>
- 
+
       <!-- Resumo de seleção -->
       <div id="selection-summary" style="display:none;margin-top:10px;padding:12px 14px;background:var(--mist);border-radius:8px;border-left:3px solid var(--moss);">
         <div style="font-size:11px;font-weight:600;color:var(--moss);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px">Selecionado</div>
         <div id="selection-text" style="font-size:13px;color:var(--forest);font-weight:500;line-height:1.5"></div>
         <div id="selection-foyer-note" style="font-size:11px;color:var(--muted);margin-top:4px">✓ Foyer incluído automaticamente</div>
       </div>
- 
+
       <!-- Tabela de capacidade -->
       <div id="cap-table-wrap" style="margin-top:10px;display:none">
         <table class="cap-table">
@@ -372,13 +372,13 @@ strong { font-weight:600; }
         </table>
       </div>
     </div>
- 
+
     <div class="btn-row">
       <button class="btn-ghost" onclick="goStep(1)">← Voltar</button>
       <button class="btn-primary" style="width:auto;padding:12px 28px" onclick="next(3)">Próximo →</button>
     </div>
   </div>
- 
+
   <!-- STEP 3 — Período -->
   <div class="step" id="step-3">
     <div class="step-label">Passo 4 de 6</div>
@@ -393,11 +393,11 @@ strong { font-weight:600; }
       <div class="period-card" onclick="selPeriod(this,'fds-noite',true,'12 Horas')"><div class="period-emoji">🥂</div><div class="period-name">FDS — Noite</div><div class="period-time">Sáb. ou Dom. após 18h (+20%)</div></div>
     </div>
     <div class="btn-row">
-      <button class="btn-ghost" onclick="goStep(2)">← Voltar</button>
+      <button class="btn-ghost" onclick="S.eventType==='Social'?goStep(0):goStep(2)">← Voltar</button>
       <button class="btn-primary" style="width:auto;padding:12px 28px" onclick="next(4)">Próximo →</button>
     </div>
   </div>
- 
+
   <!-- STEP 4 — Extras -->
   <div class="step" id="step-4">
     <div class="step-label">Passo 5 de 6</div>
@@ -446,7 +446,7 @@ strong { font-weight:600; }
       <button class="btn-primary" style="width:auto;padding:12px 28px" onclick="calcEstimate()">Ver estimativa →</button>
     </div>
   </div>
- 
+
   <!-- STEP 5 — Resultado -->
   <div class="step" id="step-5">
     <div class="step-label">Estimativa</div>
@@ -465,7 +465,7 @@ strong { font-weight:600; }
     <div style="margin-top:14px;text-align:center"><button class="btn-ghost" onclick="resetCalc()">Refazer simulação</button></div>
   </div>
 </div>
- 
+
 <!-- ═══════════════════════════════════
      DISPONIBILIDADE
 ═══════════════════════════════════ -->
@@ -473,9 +473,9 @@ strong { font-weight:600; }
   <div class="step-label">Disponibilidade de datas</div>
   <div class="step-title" style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--forest);margin-bottom:4px">Verifique uma data</div>
   <p style="font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.5">Datas em vermelho já estão reservadas ou em negociação ativa na nossa agenda.</p>
- 
+
   <div id="avail-status" style="text-align:center;padding:16px;font-size:13px;color:var(--muted)">⏳ Consultando agenda...</div>
- 
+
   <div id="cal-wrap" style="display:none;background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:18px">
     <div class="cal-nav">
       <button class="cal-nav-btn" onclick="changeMonth(-1)">‹</button>
@@ -500,7 +500,7 @@ strong { font-weight:600; }
     <p class="small" style="margin-top:6px">⚠️ Datas sujeitas a confirmação pela equipe.</p>
   </div>
 </div>
- 
+
 <!-- ═══════════════════════════════════
      AGENDAMENTO
 ═══════════════════════════════════ -->
@@ -559,17 +559,17 @@ strong { font-weight:600; }
     <div style="margin-top:14px;text-align:center"><button class="btn-ghost" onclick="resetVisit()">Enviar outra solicitação</button></div>
   </div>
 </div>
- 
+
 </div><!-- /panels -->
- 
+
 <script>
 /* ══════════════════════════════════════
    ⚙️ CONFIGURAÇÃO — cole as URLs do Make
 ══════════════════════════════════════ */
 const MAKE_DATAS_URL = 'https://hook.us2.make.com/5wt396bowqp5596ric26y56hs4mhgqay';
 const MAKE_LEAD_URL  = 'https://hook.us2.make.com/g68nuqt9eafeypnmjfde6xhl0eievmvx';
- 
- 
+
+
 /* ══════════════════════════════════════
    TABELA DE PREÇOS — valores reais Notion
    Foyer: obrigatório em qualquer combo
@@ -596,23 +596,23 @@ const SPACE_DATA = {
 };
 // Foyer: R$3.300 até 18h | R$3.960 após 18h | incluso no Salão inteiro e no Social
 const FOYER_P = { base:3300, noturno:3960 };
- 
+
 const CUSTO_SEG  = {'8 Horas':682.5,  '12 Horas':861};
 const CUSTO_LIMP = {'8 Horas':472.5,  '12 Horas':504};
 const CUSTO_BOMB = {'8 Horas':624.75, '12 Horas':761.25};
 const qtdSeg  = p => p<=200?1:p<=350?3:p<=400?4:p<=500?5:6;
 const qtdLimp = p => p<=100?2:p<=270?3:p<=350?4:p<=400?5:p<=500?6:7;
 const qtdBomb = p => p<=400?1:p<=500?2:3;
- 
+
 const EXTRA_PRICES = { pacoteAV:2400, gerador:5460, montagem:5500, lona:6500 };
 const EXTRA_LABELS = { pacoteAV:'Pacote A/V (Técnico + 4 caixas + projetor + 2 mics)', gerador:'Gerador 220kVA — 12h', montagem:'Montagem / pré / pós', lona:'Cobertura lona cristal' };
 const PERIOD_LABEL = { manha:'Manhã (08h–13h)', tarde:'Tarde (13h–18h)', integral:'Integral (08h–18h)', noturno:'Noturno (após 18h)', 'fds-dia':'FDS — Dia', 'fds-noite':'FDS — Noite' };
- 
+
 /* ══════════════════════════════════════
    STATE — spaces agora é um Set (multi)
 ══════════════════════════════════════ */
 const S = { eventType:null, people:200, spaces:new Set(), period:null, apos18:false, dur:'8 Horas', extras:new Set() };
- 
+
 /* ══════════════════════════════════════
    TABS
 ══════════════════════════════════════ */
@@ -623,7 +623,7 @@ function showTab(id,btn) {
   btn.classList.add('active');
   if(id==='avail'&&!calLoaded) loadDates();
 }
- 
+
 /* ══════════════════════════════════════
    STEPS
 ══════════════════════════════════════ */
@@ -635,6 +635,8 @@ function goStep(n) {
 }
 function next(n) {
   if(n===1&&!S.eventType){alert('Selecione o tipo de evento.');return;}
+  // Social: pula step 2 (espaços já pré-definidos) e vai direto para período
+  if(n===2 && S.eventType==='Social') { goStep(3); return; }
   if(n===3&&S.spaces.size===0){alert('Selecione ao menos um espaço na planta.');return;}
   if(n===4&&!S.period){alert('Selecione o período.');return;}
   goStep(n);
@@ -645,7 +647,7 @@ function updateDots(c) {
     d.className='step-dot'+(i<c?' done':i===c?' current':'');
   }
 }
- 
+
 /* ══════════════════════════════════════
    SELECTIONS
 ══════════════════════════════════════ */
@@ -655,6 +657,14 @@ function sel(el,key,val) {
   // Mostrar aviso especial para eventos sociais
   const notice = document.getElementById('social-notice');
   if(notice) notice.style.display = (key==='eventType' && val==='Social') ? 'block' : 'none';
+  // Social: pré-selecionar salão inteiro + área externa automaticamente
+  if(key==='eventType' && val==='Social') {
+    S.spaces.clear();
+    S.spaces.add('salao');
+    S.spaces.add('externo');
+  } else if(key==='eventType') {
+    S.spaces.clear(); // limpa ao trocar tipo
+  }
 }
 function selPeriod(el,pid,apos18,dur) {
   document.querySelectorAll('.period-card').forEach(c=>c.classList.remove('selected'));
@@ -664,7 +674,7 @@ function toggleExtra(el,key) {
   el.classList.toggle('selected');
   if(S.extras.has(key)) S.extras.delete(key); else S.extras.add(key);
 }
- 
+
 /* ══════════════════════════════════════
    PLANTA — seleção múltipla
    Foyer: sempre visualmente marcado (automático)
@@ -684,7 +694,7 @@ function toggleRoom(roomId) {
   updateRoomVisuals();
   updateSelectionSummary();
 }
- 
+
 function selectSalaoInteiro() {
   // Salão inteiro: preserva área externa se já estava selecionada
   const hadExterno = S.spaces.has('externo');
@@ -694,7 +704,7 @@ function selectSalaoInteiro() {
   updateRoomVisuals();
   updateSelectionSummary();
 }
- 
+
 function updateRoomVisuals() {
   ['sala01','sala02','sala03','deck','salao','externo'].forEach(id => {
     const el = document.getElementById('room-'+id);
@@ -710,40 +720,41 @@ function updateRoomVisuals() {
     });
   }
 }
- 
- 
+
+
 function getSpaceSummary() {
   const isSocial = S.eventType === 'Social';
   const isNoturno = S.apos18;
-  const hasSalao = S.spaces.has('salao');
   const items = [];
- 
+
+  if (isSocial) {
+    // Social: pacote fixo R$60.000 — salão inteiro + área externa + foyer incluso
+    items.push({ id:'salao',   name:'Salão inteiro (01+02+03 + Foyer + Deck)', price: 45000 });
+    items.push({ id:'externo', name:'Área Externa — Estrutura Box Truss',       price: 5000  });
+    items.push({ id:'lona',    name:'Cobertura área externa (lona)',             price: 10000 });
+    items.push({ id:'foyer',   name:'Foyer (incluso no pacote)',                price: 0     });
+    return items;
+  }
+
+  const hasSalao = S.spaces.has('salao');
   [...S.spaces].forEach(id => {
     const sp = SPACE_DATA[id];
     if (!sp) return;
-    let price = 0;
-    if (isSocial && sp.social !== null && sp.social !== undefined) {
-      price = sp.social; // Preço fixo para eventos sociais
-    } else {
-      price = isNoturno ? sp.noturno : sp.base;
-    }
+    const price = isNoturno ? sp.noturno : sp.base;
     items.push({ id, name: sp.name, price });
   });
- 
+
   // Foyer: sempre incluir
   if (hasSalao) {
-    // Salão inteiro já inclui Foyer — sem custo extra
     items.push({ id:'foyer', name:'Foyer (incluso no Salão inteiro)', price: 0 });
   } else if (items.length > 0) {
-    // Para salas individuais: Foyer obrigatório
-    // Social com salas individuais: Foyer incluso sem custo (cobrado como parte do pacote)
-    const fp = isSocial ? 0 : (isNoturno ? FOYER_P.noturno : FOYER_P.base);
-    items.push({ id:'foyer', name: isSocial ? 'Foyer (incluso)' : 'Foyer (incluso obrigatório)', price: fp });
+    const fp = isNoturno ? FOYER_P.noturno : FOYER_P.base;
+    items.push({ id:'foyer', name:'Foyer (incluso obrigatório)', price: fp });
   }
- 
+
   return items;
 }
- 
+
 function updateSelectionSummary() {
   if(S.spaces.size === 0) {
     document.getElementById('selection-summary').style.display='none';
@@ -753,15 +764,15 @@ function updateSelectionSummary() {
   const items = getSpaceSummary();
   const fmt = v => v===0 ? 'Incluso' : 'R$ '+v.toLocaleString('pt-BR');
   const total = items.reduce((s,i)=>s+i.price,0);
- 
+
   document.getElementById('selection-text').innerHTML =
     items.map(i=>`<div>${i.name} <span style="color:var(--moss);font-weight:600">${fmt(i.price)}</span></div>`).join('') +
     (items.length>1 ? `<div style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(46,125,69,.2);font-weight:700">Total espaços: R$ ${total.toLocaleString('pt-BR')}</div>` : '');
- 
+
   document.getElementById('selection-foyer-note').style.display =
     S.spaces.has('salao') ? 'none' : 'block';
   document.getElementById('selection-summary').style.display='block';
- 
+
   // Tabela de capacidade da primeira seleção
   const firstId = [...S.spaces][0];
   const sp = SPACE_DATA[firstId];
@@ -774,7 +785,7 @@ function updateSelectionSummary() {
     document.getElementById('cap-table-wrap').style.display='block';
   }
 }
- 
+
 /* ══════════════════════════════════════
    PEOPLE SLIDER
 ══════════════════════════════════════ */
@@ -792,7 +803,7 @@ function updatePeople(v) {
   else h.innerHTML=`💡 Para ${v} pessoas: <strong>Salão inteiro + Área externa</strong> — coquetel até 700p.`;
 }
 updatePeople(200);
- 
+
 /* ══════════════════════════════════════
    CALCULADORA
 ══════════════════════════════════════ */
@@ -813,9 +824,9 @@ function calcEstimate() {
   const total = valorEspacos+vSeg+vLimp+vBomb+extras;
   const fmt = v => v===0?'Incluso':'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:0});
   const fmtV = v => 'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:0});
- 
+
   document.getElementById('est-total').textContent=fmtV(total);
- 
+
   const isSocialEst = isSoc;
   const rows = [
     ...spaceItems.map(i=>[i.name, fmt(i.price)]),
@@ -829,7 +840,7 @@ function calcEstimate() {
     ? `<div style="margin-top:10px;padding:10px 12px;background:rgba(255,255,255,.08);border-radius:6px;font-size:11px;color:rgba(255,255,255,.65);line-height:1.6;">⚠️ Eventos sociais são operados por parceiro terceirizado com buffet incluso. O som deve permanecer na área interna do salão (restrição de ruído). Valor fixo por até 8h de evento.</div>`
     : '';
   document.getElementById('est-rows').innerHTML=rows.map(([k,v])=>`<div class="est-row"><span>${k}</span><span>${v}</span></div>`).join('')+socialNote;
- 
+
   const espacosNomes = spaceItems.filter(i=>i.price>0||i.id==='foyer').map(i=>i.name).join(' + ');
   document.getElementById('summary-list').innerHTML=[
     ['Tipo de evento', S.eventType],
@@ -840,12 +851,12 @@ function calcEstimate() {
     ['Foyer / banheiros', 'Incluso em todos os espaços'],
     ['Estacionamento', '1.000+ vagas — incluso'],
   ].map(([k,v])=>`<li><span>${k}</span><strong>${v}</strong></li>`).join('');
- 
+
   const msg=`Olá! Fiz a simulação no site:\n• Evento: ${S.eventType}\n• Espaço(s): ${espacosNomes}\n• Pessoas: ${S.people}\n• Período: ${PERIOD_LABEL[S.period]}\n• Total estimado: ${fmtV(total)}\nGostaria de receber um orçamento completo!`;
   document.getElementById('wa-link').href=`https://wa.me/5511989288789?text=${encodeURIComponent(msg)}`;
   goStep(5);
 }
- 
+
 function resetCalc() {
   S.eventType=null; S.people=200; S.spaces.clear(); S.period=null; S.apos18=false; S.dur='8 Horas'; S.extras.clear();
   document.querySelectorAll('.option-card').forEach(c=>{c.classList.remove('selected');const ck=c.querySelector('.option-check');if(ck)ck.textContent='✓';});
@@ -855,24 +866,24 @@ function resetCalc() {
   document.getElementById('selection-summary').style.display='none';
   goStep(0);
 }
- 
+
 function prefillVisit() {
   if(S.eventType) document.getElementById('v-tipo').value=S.eventType;
   if(S.people) document.getElementById('v-pessoas').value=S.people;
 }
- 
+
 /* ══════════════════════════════════════
    CALENDÁRIO — busca datas via Claude API
    como proxy CORS para o Notion
 ══════════════════════════════════════ */
 let calYear, calMonth, calSelected=null, bookedDates=new Set(), calLoaded=false;
- 
+
 async function loadDates() {
   const statusEl = document.getElementById('avail-status');
   const calWrap  = document.getElementById('cal-wrap');
   statusEl.textContent = '⏳ Consultando agenda...';
   statusEl.style.color = '';
- 
+
   try {
     const r = await fetch(MAKE_DATAS_URL);
     if (!r.ok) throw new Error('status ' + r.status);
@@ -894,14 +905,14 @@ async function loadDates() {
     calLoaded = true;
   }
 }
- 
- 
+
+
 function initCalendar(dates) {
   bookedDates=new Set(dates);
   const now=new Date(); calYear=now.getFullYear(); calMonth=now.getMonth();
   renderCalendar();
 }
- 
+
 function changeMonth(dir) {
   calMonth+=dir;
   if(calMonth>11){calMonth=0;calYear++;}
@@ -911,7 +922,7 @@ function changeMonth(dir) {
   document.getElementById('btn-book-date').style.display='none';
   renderCalendar();
 }
- 
+
 function renderCalendar() {
   const months=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
   document.getElementById('cal-title').textContent=`${months[calMonth]} ${calYear}`;
@@ -933,7 +944,7 @@ function renderCalendar() {
     grid.appendChild(el);
   }
 }
- 
+
 function selectDay(iso,el) {
   document.querySelectorAll('.cal-day.selected').forEach(x=>x.classList.remove('selected'));
   el.classList.add('selected'); calSelected=iso;
@@ -944,13 +955,13 @@ function selectDay(iso,el) {
   nb.innerHTML=`✅ <strong>${+d} de ${months[+m-1]} de ${y}</strong> está disponível! Clique abaixo para agendar sua visita.`;
   document.getElementById('btn-book-date').style.display='block';
 }
- 
+
 function bookSelectedDate() {
   if(!calSelected) return;
   showTab('visit',document.querySelectorAll('.tab-btn')[2]);
   document.getElementById('v-data-evento').value=calSelected;
 }
- 
+
 /* ══════════════════════════════════════
    FORM VISITA — envia para Notion
 ══════════════════════════════════════ */
@@ -967,10 +978,10 @@ async function submitVisit() {
   const dataEvento=document.getElementById('v-data-evento').value;
   const obs=document.getElementById('v-obs').value.trim();
   if(!nome||!email||!whats||!dataVisita){alert('Preencha: nome, e-mail, WhatsApp e data de visita.');return;}
- 
+
   showLoading('Registrando lead no Notion...');
   let success=false;
- 
+
   try {
     const props={
       'Name':{title:[{text:{content:nome+(empresa?` — ${empresa}`:'')}}]},
@@ -985,7 +996,7 @@ async function submitVisit() {
     if(formato) props['Formato']={select:{name:formato}};
     if(pessoas) props['Número de pessoas']={number:+pessoas};
     if(dataEvento){ props['Data do evento']={date:{start:dataEvento}}; props['Período completo']={date:{start:dataEvento}}; }
- 
+
     const leadData = {
       nome, empresa, email, whatsapp: whats,
       tipo, formato,
@@ -1001,14 +1012,14 @@ async function submitVisit() {
     success = r.ok;
     success=r.ok;
   } catch(e){}
- 
+
   hideLoading();
   showSuccess(nome,empresa,email,whats,dataVisita,horario,tipo,pessoas,dataEvento);
- 
+
   let msg=`Olá! Acabei de solicitar uma visita pelo site.\n\n👤 ${nome}${empresa?'\n🏢 '+empresa:''}\n📧 ${email}\n📱 ${whats}\n📅 Visita: ${fmtDate(dataVisita)}${horario?' às '+horario:''}${tipo?'\n🎯 '+tipo:''}${pessoas?'\n👥 '+pessoas+' pessoas':''}${dataEvento?'\n📆 Evento: '+fmtDate(dataEvento):''}${obs?'\n💬 '+obs:''}`;
   setTimeout(()=>window.open(`https://wa.me/5511989288789?text=${encodeURIComponent(msg)}`,'_blank'),800);
 }
- 
+
 function showSuccess(nome,empresa,email,whats,dataVisita,horario,tipo,pessoas,dataEvento) {
   document.getElementById('visit-form-wrap').style.display='none';
   document.getElementById('visit-success').style.display='block';
@@ -1020,13 +1031,13 @@ function showSuccess(nome,empresa,email,whats,dataVisita,horario,tipo,pessoas,da
     (pessoas?`<br><strong>Pessoas:</strong> ${pessoas}`:'')+
     (dataEvento?`<br><strong>Data do evento:</strong> ${fmtDate(dataEvento)}`:'');
 }
- 
+
 function resetVisit() {
   document.getElementById('visit-form-wrap').style.display='block';
   document.getElementById('visit-success').style.display='none';
   document.querySelectorAll('#panel-visit input,#panel-visit select,#panel-visit textarea').forEach(el=>el.value='');
 }
- 
+
 /* ══════════════════════════════════════
    HELPERS
 ══════════════════════════════════════ */
@@ -1038,7 +1049,7 @@ function fmtDate(str) {
 }
 function showLoading(txt) { document.getElementById('loading-text').textContent=txt; document.getElementById('loading').classList.add('visible'); }
 function hideLoading() { document.getElementById('loading').classList.remove('visible'); }
- 
+
 const todayStr=new Date().toISOString().split('T')[0];
 document.getElementById('v-data-visita').min=todayStr;
 document.getElementById('v-data-evento').min=todayStr;
