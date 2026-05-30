@@ -257,7 +257,7 @@ strong { font-weight:600; }
         <div class="option-check">✓</div>
       </div>
     </div>
-    <div id="social-notice" style="display:none;margin-top:12px;padding:12px 14px;background:#FDF4E1;border:1px solid #F5D78A;border-radius:8px;font-size:13px;color:#6B4B00;line-height:1.6;"><strong>⚠️ Evento Social — pacote único R$ 60.000</strong><br>• Inclui <strong>Salão inteiro + Área externa + Cobertura (lona)</strong> — espaço completo<br>• O <strong>som deve ficar na área interna</strong> do salão (restrição de ruído para a vizinhança)<br>• Operação realizada por <strong>parceiro terceirizado</strong> com buffet completo incluso<br>• Valor fixo por até 8 horas de evento</div>
+    <div id="social-notice" style="display:none;margin-top:12px;padding:12px 14px;background:#FDF4E1;border:1px solid #F5D78A;border-radius:8px;font-size:13px;color:#6B4B00;line-height:1.6;"><strong>⚠️ Evento Social — locação R$ 60.000</strong><br>• Inclui <strong>Salão inteiro + Área externa + Cobertura (lona)</strong> — espaço completo<br>• O <strong>som deve ficar na área interna</strong> do salão (restrição de ruído para a vizinhança)<br>• A operação é realizada por um <strong>parceiro terceirizado</strong> — buffet e serviços são contratados à parte diretamente com o operador<br>• Valor fixo de locação por até 8 horas de evento</div>
     <div class="btn-row" style="justify-content:flex-end">
       <button class="btn-primary" style="width:auto;padding:12px 28px" onclick="next(1)">Próximo →</button>
     </div>
@@ -836,7 +836,7 @@ function calcEstimate() {
     ['TOTAL', fmtV(total)],
   ];
   const socialNote = isSocialEst
-    ? `<div style="margin-top:10px;padding:10px 12px;background:rgba(255,255,255,.08);border-radius:6px;font-size:11px;color:rgba(255,255,255,.65);line-height:1.6;">⚠️ Eventos sociais são operados por parceiro terceirizado com buffet incluso. O som deve permanecer na área interna do salão (restrição de ruído). Valor fixo por até 8h de evento.</div>`
+    ? `<div style="margin-top:10px;padding:10px 12px;background:rgba(255,255,255,.08);border-radius:6px;font-size:11px;color:rgba(255,255,255,.65);line-height:1.6;">⚠️ Valor de locação do espaço. A operação (buffet, serviços) é contratada à parte com parceiro terceirizado. O som deve permanecer na área interna do salão (restrição de ruído). Valor fixo por até 8h.</div>`
     : '';
   document.getElementById('est-rows').innerHTML=rows.map(([k,v])=>`<div class="est-row"><span>${k}</span><span>${v}</span></div>`).join('')+socialNote;
 
@@ -848,7 +848,7 @@ function calcEstimate() {
     ['Período', PERIOD_LABEL[S.period]||S.period],
     ['Operacional', `Seg: ${qtdSeg(p)} · Limp: ${qtdLimp(p)} · Bomb: ${qtdBomb(p)}`],
     ['Foyer / banheiros', 'Incluso em todos os espaços'],
-    ['Estacionamento', '1.000+ vagas — incluso'],
+    ['Estacionamento', 'Parceria — diária 12h com valor especial'],
   ].map(([k,v])=>`<li><span>${k}</span><strong>${v}</strong></li>`).join('');
 
   const msg=`Olá! Fiz a simulação no site:\n• Evento: ${S.eventType}\n• Espaço(s): ${espacosNomes}\n• Pessoas: ${S.people}\n• Período: ${PERIOD_LABEL[S.period]}\n• Total estimado: ${fmtV(total)}\nGostaria de receber um orçamento completo!`;
