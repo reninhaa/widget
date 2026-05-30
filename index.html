@@ -851,7 +851,30 @@ function calcEstimate() {
     ['Estacionamento', 'Parceria — diária 12h com valor especial'],
   ].map(([k,v])=>`<li><span>${k}</span><strong>${v}</strong></li>`).join('');
 
-  const msg=`Olá! Fiz a simulação no site:\n• Evento: ${S.eventType}\n• Espaço(s): ${espacosNomes}\n• Pessoas: ${S.people}\n• Período: ${PERIOD_LABEL[S.period]}\n• Total estimado: ${fmtV(total)}\nGostaria de receber um orçamento completo!`;
+  // Build detailed WhatsApp message
+  const spacesLines = spaceItems.filter(i=>i.price>0).map(i=>`  • ${i.name}: ${fmt(i.price)}`).join('\n');
+  const foyerItem = spaceItems.find(i=>i.id==='foyer');
+  const foyerLine = foyerItem && foyerItem.price===0 ? `  • Foyer (incluso): R$ 0` : foyerItem ? `  • ${foyerItem.name}: ${fmt(foyerItem.price)}` : '';
+  const extrasLines = [...S.extras].map(k=>`  • ${EXTRA_LABELS[k]}: ${fmtV(k==='lona'?10000:EXTRA_PRICES[k])}`).join('\n');
+  const opLines = `  • Segurança (${qtdSeg(p)} prof.): ${fmtV(vSeg)}\n  • Limpeza (${qtdLimp(p)} prof.): ${fmtV(vLimp)}\n  • Bombeiro (${qtdBomb(p)} prof.): ${fmtV(vBomb)}`;
+
+  const msg = `Olá! Fiz a simulação no site do Espaço do Bosque 🌿
+
+📋 SIMULAÇÃO DE ORÇAMENTO
+
+🎯 Tipo de evento: ${S.eventType}
+👥 Convidados: ${S.people} pessoas
+⏰ Período: ${PERIOD_LABEL[S.period]||S.period}
+
+🏛️ ESPAÇOS
+${spacesLines}${foyerLine ? '\n'+foyerLine : ''}
+
+👮 OPERACIONAL
+${opLines}${extrasLines ? '\n\n➕ ADICIONAIS\n'+extrasLines : ''}
+
+💰 TOTAL ESTIMADO: ${fmtV(total)}
+
+Gostaria de receber um orçamento formal e verificar disponibilidade da data!`;
   document.getElementById('wa-link').href=`https://wa.me/5511989288789?text=${encodeURIComponent(msg)}`;
   goStep(5);
 }
